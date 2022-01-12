@@ -1,4 +1,4 @@
-package data_structures;
+package problems;
 
 /**
  * Challenge 9: Re-arrange Positive & Negative Values

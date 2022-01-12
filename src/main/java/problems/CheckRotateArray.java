@@ -1,4 +1,4 @@
-package data_structures;
+package problems;
 
 /**
  * Challenge 8: Right Rotate the Array by One Index

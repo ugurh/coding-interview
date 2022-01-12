@@ -1,4 +1,4 @@
-package data_structures;
+package problems;
 
 /**
  * Challenge 7: Find Second Maximum Value in an Array

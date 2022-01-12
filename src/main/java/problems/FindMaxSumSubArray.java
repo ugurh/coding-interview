@@ -1,4 +1,4 @@
-package data_structures;
+package problems;
 
 /**
  * Find the Sum of Maximum Sum Subarray

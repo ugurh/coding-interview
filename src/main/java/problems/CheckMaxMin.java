@@ -1,4 +1,4 @@
-package data_structures;
+package problems;
 /**
  * Challenge 10: Rearrange Sorted Array in Max/Min Form
  * Given an array, can you re-arrange the elements such that

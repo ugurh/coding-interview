@@ -1,4 +1,4 @@
-package data_structures;
+package problems;
 
 /**
  * Implement Binary Search on a Sorted Array

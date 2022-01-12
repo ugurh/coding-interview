@@ -1,4 +1,4 @@
-package data_structures;
+package problems;
 
 /**
  * Challenge 5: Find Minimum Value in Array
