@@ -22,7 +22,14 @@ public class Employee {
 
     @Override
     public boolean equals(Object obj) {
-        Employee emp = (Employee) obj;
-        return this.empId == emp.empId;
+        Employee other = (Employee) obj;
+        if (empId != other.empId)
+            return false;
+        if (empName == null) {
+            if (other.empName != null)
+                return false;
+        } else if (!empName.equals(other.empName))
+            return false;
+        return true;
     }
 }
