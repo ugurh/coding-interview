@@ -1,6 +1,8 @@
 package data_structures;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -118,5 +120,22 @@ public class ArraysDemo {
         for (int i : numbersf) {
             System.out.print(i + " ");
         }
+        System.out.println("--------------------");
+
+        List<Integer> listx = new ArrayList<>();
+        listx.add(34);
+        listx.add(12);
+        listx.add(9);
+        listx.add(76);
+        listx.add(29);
+        listx.add(75);
+
+        System.out.println("The minimum element in the List is: " + Collections.min(list));
+        System.out.println("The maximum element in the List is: " + Collections.max(listx));
+        System.out.println("Total number of times,9 is present in the List is: " + Collections.frequency(list, 9));
+        System.out.println("The minimum element in the List is: " + Collections.binarySearch(listx,new Integer(34)));
+
+
     }
 }
+
