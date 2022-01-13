@@ -1,6 +1,7 @@
 package data_structures;
 
 import java.util.Arrays;
+import java.util.List;
 
 /**
  * Quicksort is faster in both cases, it is not a stable algorithm.
@@ -96,5 +97,26 @@ public class ArraysDemo {
 
         // Printing the name of first employee in copied array.
         System.out.println(copiedArray[0].empName);
+
+        Integer[] numbersl = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+
+        List<Integer> list = Arrays.asList(numbersl);
+
+        System.out.println(list);
+        // list.add(50); //UnsupportedOperationException
+
+
+        Integer[] numbers1 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        Integer[] numbers2 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        boolean isEqual = Arrays.equals(numbers1, numbers2);
+        System.out.println("Checking if two arrays are equal : " + isEqual);
+        System.out.println("--------------------");
+
+        Integer[] numbersf = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        Arrays.fill(numbersf, 20);
+
+        for (int i : numbersf) {
+            System.out.print(i + " ");
+        }
     }
 }
