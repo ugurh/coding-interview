@@ -8,6 +8,10 @@ public class SearchValueLinkedList {
     }
 
     public static boolean isExist(Node head, int num) {
+        if (head == null) {
+            return false;
+        }
+
         for (Node node = head; node != null; node = node.next) {
             if (node.value == num)
                 return true;
@@ -15,13 +19,23 @@ public class SearchValueLinkedList {
         return false;
     }
 
+    public static boolean isExist2(Node head, int num) {
+        if (head == null) {
+            return false;
+        }
+        if (head.value == num)
+            return true;
+        else
+            return isExist2(head.next, num);
+    }
+
     public static Node insert(Node head, int value) {
         Node newNode = new Node();
         newNode.value = value;
         newNode.next = head;
         head = newNode;
-        return head;
 
+        return head;
     }
 
     public static void main(String args[]) {
@@ -34,8 +48,8 @@ public class SearchValueLinkedList {
         head = insert(head, 2);
         head = insert(head, 1);
 
-        int number = 6;
-        boolean result = isExist(head, number);
+        int number = 3;
+        boolean result = isExist2(head, number);
 
         System.out.println(number + " is exist in Linked List: " + result);
     }
