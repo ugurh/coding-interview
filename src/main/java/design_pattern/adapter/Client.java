@@ -1,4 +1,4 @@
-package adapter;
+package design_pattern.adapter;
 
 public class Client {
 

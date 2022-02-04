@@ -1,4 +1,4 @@
-package adapter;
+package design_pattern.adapter;
 
 /**
  * The Adapter pattern is similar in that it sits between two incompatible classes that
