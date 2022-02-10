@@ -1,4 +1,4 @@
-package composite.nato_example;
+package design_pattern.composite.nato_example;
 
 public class Client {
 
