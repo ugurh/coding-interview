@@ -7,7 +7,9 @@ public class Test {
         // MissedSignalExample.example();
         // FixedMissedSignalExample.example();
         // IncorrectSemaphoreExample.example();
-        CorrectSemaphoreExample.example();
+        // CorrectSemaphoreExample.example();
+        ReorderingExample reorderingExample = new ReorderingExample();
+        reorderingExample.example();
 
     }
 }
