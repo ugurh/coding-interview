@@ -1,7 +1,7 @@
 package algorithms.brute_force;
 
 /**
- * Time Complexity: O(n)O(n)
+ * Time Complexity: O(n)
  * - since we’re checking each element exactly once in the worst case.
  */
 public class BruteForce {
