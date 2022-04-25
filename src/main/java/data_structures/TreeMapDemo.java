@@ -78,21 +78,19 @@ public class TreeMapDemo {
 
 
     public static TreeMap<String, Integer> sortByValues(TreeMap<String, Integer> map) {
-        Comparator<String> valueComparator = new Comparator<String>() {
-            // return comparison results of values of two keys
-            public int compare(String k1, String k2) {
-                int comp = map.get(k1).compareTo(map.get(k2));
-                /**
-                 * we are returning 1 if both the values are the same.
-                 * The reason for doing this is that if two values are the same,
-                 * then the TreeMap will consider it as duplicate,
-                 * and it will not insert the keys in the Map.
-                 */
-                if (comp == 0)
-                    return 1;
-                else
-                    return comp;
-            }
+        // return comparison results of values of two keys
+        Comparator<String> valueComparator = (k1, k2) -> {
+            int comp = map.get(k1).compareTo(map.get(k2));
+            /**
+             * we are returning 1 if both the values are the same.
+             * The reason for doing this is that if two values are the same,
+             * then the TreeMap will consider it as duplicate,
+             * and it will not insert the keys in the Map.
+             */
+            if (comp == 0)
+                return 1;
+            else
+                return comp;
         };
 
         TreeMap<String, Integer> mapSortedByValues = new TreeMap<>(valueComparator);
