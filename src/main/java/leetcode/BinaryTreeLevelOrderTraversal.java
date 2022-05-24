@@ -79,6 +79,35 @@ public class BinaryTreeLevelOrderTraversal {
         return resultList;
     }
 
+
+    public List<List<Integer>> levelOrder3(Node root) {
+        if (root == null) {
+            return new ArrayList<>();
+        }
+
+        List<List<Integer>> result = new ArrayList<>();
+        helper(root, result, 0);
+        return result;
+    }
+
+    public void helper(Node root, List<List<Integer>> list, int depth) {
+        if (list.size() <= depth) {
+            ArrayList<Integer> newList = new ArrayList<>();
+            newList.add(root.val);
+            list.add(newList);
+        } else {
+            list.get(depth).add(root.val);
+        }
+
+        if (root.left != null) {
+            helper(root.left, list, depth + 1);
+        }
+
+        if (root.right != null) {
+            helper(root.right, list, depth + 1);
+        }
+    }
+
     static class Node {
         int val;
         Node left;
