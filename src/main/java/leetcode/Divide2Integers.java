@@ -3,7 +3,7 @@ package leetcode;
 public class Divide2Integers {
 
     public static void main(String[] args) {
-        System.out.println(divide(-2147483648, 2));
+        System.out.println(divide(-8, 2));
     }
 
     public static int divide(int dividend, int divisor) {
@@ -21,8 +21,8 @@ public class Divide2Integers {
         boolean neg = dividend < 0 ^ divisor < 0;
 
         // Make it to long to avoid abs(Integer.MIN_VALUE) being overflow
-        long ldd = Math.abs((long) dividend);
-        long ldr = Math.abs((long) divisor);
+        long longDividend = Math.abs((long) dividend);
+        long longDivisor = Math.abs((long) divisor);
 
         // bitwise operator(<<):
         //    ex:
@@ -33,14 +33,16 @@ public class Divide2Integers {
         //    X << Y = X * 2^Y.
 
         int quotient = 0;
-        while (ldd >= ldr) {
+        while (longDividend >= longDivisor) {
             int shift = 0;
-            while (ldd >= (ldr << shift)) {
+            while (longDividend >= (longDivisor << shift)) {
                 shift++;
             }
             shift--;
+
             if (shift < 0) shift = 0;
-            ldd = ldd - (ldr << shift);
+
+            longDividend = longDividend - (longDivisor << shift);
             quotient = quotient + (1 << shift);
         }
 
